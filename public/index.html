@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">桃園埤塘虛擬馬拉松 | Taoyuan Ponds Virtual Marathon</title>
+    <meta name="description" content="報名參加桃園埤塘虛擬馬拉松，沿著美麗的埤塘揮灑汗水，透過Strava上傳您的挑戰紀錄！">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" data-i18n="nav_logo">桃園埤塘馬拉松</a>
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav_about">活動資訊</a></li>
+                <li><a href="#badge" data-i18n="nav_badge">完賽徽章</a></li>
+                <li><a href="#strava" data-i18n="nav_strava">Strava 上傳</a></li>
+                <li><a href="#register" class="btn-primary" data-i18n="nav_register">立即報名</a></li>
+                <li><button id="lang-toggle" class="lang-btn">EN</button></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <!-- Using a placeholder for the hero image -->
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in-up" data-i18n="hero_title">2026 桃園埤塘虛擬馬拉松</h1>
+            <p class="fade-in-up delay-1" data-i18n="hero_subtitle">沿著千塘之鄉的美麗水岸，展開您的專屬挑戰。</p>
+            <div class="hero-buttons fade-in-up delay-2">
+                <a href="#register" class="btn-primary large" data-i18n="hero_btn_join">報名參賽</a>
+                <a href="#strava" class="btn-secondary large" data-i18n="hero_btn_learn">了解紀錄方式</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="about_title">活動資訊</h2>
+                <p data-i18n="about_desc">不受時間與空間限制，只要在桃園的任一埤塘周邊，您隨時都能起跑。</p>
+            </div>
+            <div class="grid-3">
+                <div class="card glass">
+                    <div class="icon">📅</div>
+                    <h3 data-i18n="about_time_title">活動時間</h3>
+                    <p data-i18n="about_time_date">2026年 10月 1日 - 10月 31日</p>
+                    <p class="sm-text" data-i18n="about_time_note">期間內隨時可完成挑戰</p>
+                </div>
+                <a href="#map-section" class="card glass clickable-card">
+                    <div class="icon">📍</div>
+                    <h3 data-i18n="about_loc_title">活動地點</h3>
+                    <p data-i18n="about_loc_desc">桃園市任一埤塘周邊步道</p>
+                    <p class="sm-text" data-i18n="about_loc_note">自由選擇，點擊查看推薦路線！</p>
+                </a>
+                <div class="card glass">
+                    <div class="icon">🏃</div>
+                    <h3 data-i18n="about_rules_title">挑戰規則</h3>
+                    <p data-i18n="about_rules_groups">歡樂健走組 5km (限時 1 小時)<br>自我挑戰組 10km (限時 1.5 小時)<br>埤塘好手組 15km (限時 2 小時)</p>
+                    <p class="sm-text mt-2 highlight-text" data-i18n="about_rules_note">完賽紀錄需包含埤塘照片</p>
+                </div>
+            </div>
+            
+            <div class="map-section mt-4 glass" id="map-section">
+                <div class="map-header">
+                    <h3 data-i18n="map_title">🗺️ 推薦路線與桃園埤塘介紹</h3>
+                    <p class="map-desc" data-i18n="map_desc">以下為推薦的埤塘路線。<strong>【重要規則】</strong>您可以任選桃園任一埤塘附近進行，不一定要按照推薦路線！但在完賽的紀錄上，請務必附上您與埤塘的合照以茲證明。</p>
+                </div>
+                
+                <div class="map-container">
+                    <!-- Placeholder for Map -->
+                    <img src="https://placehold.co/1000x400/1e293b/ffffff?text=Interactive+Route+Map+(Lines:+Routes,+Points:+Ponds)" alt="推薦路線地圖示意" class="full-width rounded-img">
+                </div>
+
+                <div class="pond-intros grid-2 mt-4">
+                    <div class="pond-card">
+                        <img src="https://images.unsplash.com/photo-1584347702844-469b6f849c71?auto=format&fit=crop&w=400&q=80" alt="八德埤塘自然生態公園">
+                        <div class="pond-info">
+                            <h4 data-i18n="pond1_title">📍 八德埤塘自然生態公園</h4>
+                            <p class="sm-text" data-i18n="pond1_desc">擁有豐富的生態多樣性與平緩的環湖步道，非常適合歡樂健走組與初學者，一圈約1.2公里。</p>
+                        </div>
+                    </div>
+                    <div class="pond-card">
+                        <img src="https://images.unsplash.com/photo-1505159940484-eb2b9f2588e2?auto=format&fit=crop&w=400&q=80" alt="青埔青塘園">
+                        <div class="pond-info">
+                            <h4 data-i18n="pond2_title">📍 青埔青塘園</h4>
+                            <p class="sm-text" data-i18n="pond2_desc">結合現代地景藝術與優美水岸，設有多景觀橋，夜間點燈後也別具風情，適合下班後來一場夜跑。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Finisher Badge Section -->
+    <section class="section badge-section" id="badge">
+        <div class="container">
+            <div class="badge-content grid-2 align-center">
+                <div class="badge-text">
+                    <h2 data-i18n="badge_title">專屬完賽數位徽章</h2>
+                    <p data-i18n="badge_desc">完成您報名的里程數並成功上傳紀錄後，您將獲得這枚設計精美的專屬數位徽章。您可以將它分享到社群媒體，展現您的堅持與毅力！</p>
+                    <ul class="feature-list">
+                        <li data-i18n="badge_feat1">💎 獨特的水岸波紋與跑者意象設計</li>
+                        <li data-i18n="badge_feat2">🏆 刻有您的專屬完賽姓名與成績</li>
+                        <li data-i18n="badge_feat3">📱 支援一鍵分享至 Facebook 與 Instagram</li>
+                    </ul>
+                </div>
+                <div class="badge-image-container">
+                    <!-- Placeholder for Finisher Badge -->
+                    <img src="https://placehold.co/400x400/0ea5e9/ffffff?text=Finisher+Badge" alt="完賽徽章示意圖" class="floating-badge">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strava Upload Section -->
+    <section class="section strava-section dark" id="strava">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="strava_title">使用 Strava 紀錄與分享</h2>
+                <p data-i18n="strava_desc">本次虛擬馬拉松全面支援 Strava！只需使用您的 Strava APP 紀錄路跑，並將結果截圖或連結上傳即可完成驗證。</p>
+            </div>
+            
+            <div class="grid-2">
+                <div class="strava-instructions glass dark-glass">
+                    <h3 data-i18n="strava_form_title">上傳您的成績</h3>
+                    <form id="strava-form" class="upload-form">
+                        <div class="form-group">
+                            <label for="bib-number" data-i18n="strava_label_bib">參賽號碼布編號</label>
+                            <input type="text" id="bib-number" placeholder="例如：T01234" data-i18n-placeholder="strava_ph_bib" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="strava-link" data-i18n="strava_label_link">Strava 活動連結 (選填)</label>
+                            <input type="url" id="strava-link" placeholder="https://www.strava.com/activities/..." required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="strava_label_upload">上傳 Strava 畫面截圖 與 埤塘照片 (必備)</label>
+                            <div class="file-upload" id="drop-zone">
+                                <span data-i18n="strava_upload_text">拖曳圖片至此或點擊上傳 (可複選)</span>
+                                <input type="file" id="screenshot" accept="image/*" multiple hidden>
+                            </div>
+                            <div id="preview-container"></div>
+                        </div>
+                        <button type="submit" class="btn-primary full-width" data-i18n="strava_btn_submit">送出成績</button>
+                    </form>
+                    <div id="success-message" class="hidden">
+                        <div class="success-icon">✅</div>
+                        <h4 data-i18n="strava_success_title">上傳成功！</h4>
+                        <p data-i18n="strava_success_desc">感謝您的參與，審核通過後您將獲得完賽徽章。</p>
+                        <button id="reset-btn" class="btn-secondary sm" data-i18n="strava_btn_reset">再傳一筆</button>
+                    </div>
+                </div>
+                <div class="strava-mockup">
+                    <!-- Placeholder for Strava Mockup -->
+                    <img src="https://placehold.co/300x600/fc4c02/ffffff?text=Strava+App+Mockup" alt="Strava App 紀錄示意" class="phone-mockup">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="section register" id="register">
+        <div class="container">
+            <div class="register-card glass">
+                <div class="section-header">
+                    <h2 data-i18n="reg_title">立即報名</h2>
+                    <p data-i18n="reg_desc">準備好挑戰自己了嗎？填寫下方表單加入我們。</p>
+                </div>
+                <form class="registration-form">
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label data-i18n="reg_label_name">姓名</label>
+                            <input type="text" placeholder="王大明" data-i18n-placeholder="reg_ph_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="reg_label_email">聯絡信箱</label>
+                            <input type="email" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="reg_label_phone">聯絡電話</label>
+                            <input type="tel" placeholder="0912-345-678" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="reg_label_gender">性別</label>
+                            <select required>
+                                <option value="" disabled selected data-i18n="reg_ph_gender">請選擇性別...</option>
+                                <option value="male" data-i18n="reg_gender_m">男</option>
+                                <option value="female" data-i18n="reg_gender_f">女</option>
+                                <option value="other" data-i18n="reg_gender_o">其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="reg_label_birthday">生日</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="reg_label_group">選擇組別</label>
+                            <select required>
+                                <option value="" disabled selected data-i18n="reg_ph_group">請選擇組別...</option>
+                                <option value="5k" data-i18n="reg_group_5k">歡樂健走組 5km</option>
+                                <option value="10k" data-i18n="reg_group_10k">自我挑戰組 10km</option>
+                                <option value="15k" data-i18n="reg_group_15k">埤塘好手組 15km</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group full-width mt-4">
+                        <button type="button" class="btn-primary large full-width" data-i18n="reg_btn_submit" onclick="alert(currentLang === 'en' ? 'Backend not connected yet!' : '報名功能尚未串接後端！')">確認報名</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="faq_title">常見問題 FAQ</h2>
+                <p data-i18n="faq_desc">如果您對活動有任何疑問，請參考以下資訊。</p>
+            </div>
+            <div class="faq-container">
+                <details class="faq-item glass">
+                    <summary data-i18n="faq_q1">一定要在推薦路線上跑嗎？</summary>
+                    <p data-i18n="faq_a1">不需要的！您可以任選桃園市任何一個埤塘附近進行挑戰，只要在完賽上傳紀錄時，附上您與埤塘的合照即可。</p>
+                </details>
+                <details class="faq-item glass">
+                    <summary data-i18n="faq_q2">限時沒有跑完怎麼辦？</summary>
+                    <p data-i18n="faq_a2">只要您的 Strava 紀錄有達到報名的總里程數，超出些許時間我們仍會從寬認定發放完賽徽章，志在參加，安全第一！</p>
+                </details>
+                <details class="faq-item glass">
+                    <summary data-i18n="faq_q3">可以分天完成里程嗎？</summary>
+                    <p data-i18n="faq_a3">本活動為單次挑戰，需在同一筆 Strava 紀錄中完成您報名的指定里程數喔！</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo" data-i18n="footer_logo">桃園埤塘虛擬馬拉松</div>
+                <p>&copy; 2026 Taoyuan Ponds Virtual Marathon. All rights reserved.</p>
+                <p class="sm-text" data-i18n="footer_note">此網站為虛擬展示，非真實活動。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

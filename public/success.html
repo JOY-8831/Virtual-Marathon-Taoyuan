@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>報名成功</title>
+</head>
+
+<body>
+
+    <h1>報名成功！</h1>
+
+    <p>感謝您參加 Taiwan Virtual Run。</p>
+
+    <p>
+        您的跑者編號：
+        <span id="runnerId"></span>
+    </p>
+
+    <p>
+        我們也已經寄送確認信到您的 Email。
+    </p>
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search)
+
+        const runnerId = params.get('runnerId')
+
+        if (runnerId) {
+            document.getElementById('runnerId').innerText = runnerId
+        }
+
+    </script>
+
+</body>
+
+</html>

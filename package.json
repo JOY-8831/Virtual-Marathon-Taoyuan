@@ -1,0 +1,10 @@
+{
+  "name": "taiwan-virtual-run",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "googleapis": "^144.0.0",
+    "formidable": "^3.5.1",
+    "nodemailer": "^6.9.13"
+  }
+}
