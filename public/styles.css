@@ -670,7 +670,7 @@ img {
     transition: var(--transition);
 }
 .faq-item[open] summary::after {
-    content: '−';
+    content: '-';
     transform: rotate(180deg);
 }
 .faq-item p {
